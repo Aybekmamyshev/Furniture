@@ -1,0 +1,21 @@
+.slider {
+  .container {
+    margin-bottom: 89px;
+  }
+
+  &__title {
+    @include txt;
+    @include font(normal, 600, 18px, 23px, #111111);
+    width: 464px;
+    text-align: center;
+    margin: 0 auto;
+  }
+
+  @media (max-width: 480px) {
+    .slider {
+      &__title {
+        width: 293px;
+      }
+    }
+  }
+}

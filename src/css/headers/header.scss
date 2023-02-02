@@ -1,0 +1,177 @@
+
+.header {
+
+  border: 1px solid rgba(17, 17, 17, 0.5);
+
+  .container {
+    padding: 10px 0 10px 0;
+    display: flex;
+    align-items: center;
+
+
+  }
+  .header__burger_active{
+    position:relative;
+  }
+  .header__burger_active &__line{
+    transform: rotate(45deg);
+    position:fixed;
+    top:70px;
+    right:40px;
+    margin: auto;
+    z-index: 10;
+    &:nth-child(2){
+      display: none;
+    }
+    &:nth-child(3){
+      transform: rotate(-45deg);
+    }
+  }
+  &__block {
+    display: flex;
+    margin: 0 0 0 auto;
+    column-gap: 70px;
+
+    &:last-child {
+      margin: 0;
+    }
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    @include font(normal, 400, 12px, 15px, #111111);
+    @include txt;
+
+
+
+  }
+
+  &__text {
+    text-align: center;
+
+  }
+
+  &__socials {
+    display: flex;
+    column-gap: 20px;
+    align-items: center;
+
+  }
+
+  &__contact {
+    @include font(normal, 600px, 18px, 23px, #007198);
+    @include txt;
+  }
+
+  &__txt {
+    @include font(normal, 400, 12px, 15px, #111111);
+    @include txt;
+    text-align: center;
+
+  }
+
+  &__select {
+    border: none;
+  }
+}
+
+
+@media (max-width: 1200px) {
+
+}
+
+@media (max-width: 960px) {
+  .header {
+    .container {
+      padding: 10px 0 11px 0;
+
+    }
+
+    &__socials {
+      display: none;
+    }
+
+    &__burger {
+      width: 33px;
+      height: 33px;
+      border: 2px solid var(--orange);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      row-gap: 5px;
+    }
+
+    &__line {
+      width: 18px;
+      height: 2px;
+      background: var(--orange);
+    }
+    &__burger{
+      margin-left: 116px;
+    }
+
+  }
+  .btn_header{
+    display:none;
+  }
+
+  }
+
+@media (max-width: 640px) {
+  .header {
+
+    &__burger{
+    }
+    &__img {
+      width: 40px;
+      height: 31px;
+      margin-right: 33px;
+
+    }
+    &__burger{
+      margin-left:15px;
+    }
+    &__contact {
+      width: 163px;
+    }
+    &__box{
+      margin: 0 0 0 117px;
+    }
+  }
+  .btn_header{
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .header {
+    .container {
+      padding: 8px 0;
+      //column-gap: 2px;
+    }
+
+    &__img {
+      width: 32px;
+      height: 25px;
+    }
+    &__txt{
+      display: none;
+    }
+    &__contact{
+      width: 110px;
+      @include font(normal,600,12px,15px,0);
+      margin-left:-106px;
+
+    }
+    &__burger{
+      margin-left:15px;
+    }
+     &__txt{
+       display: none;
+     }
+  }
+
+}

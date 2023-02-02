@@ -1,0 +1,129 @@
+.service{
+  .container{
+    padding-bottom:45px;
+  }
+  &__row{
+    column-gap:40px;
+    margin-bottom: 40px;
+  }
+  &__holder{
+    padding:30px 40px 40px 40px ;
+    background: linear-gradient(119.05deg, rgba(0, 113, 152, 0.6) 51.26%, rgba(252, 183, 139, 0.4) 89.77%, rgba(252, 183, 139, 0.4) 124.01%, rgba(0, 113, 152, 0.6) 163.79%);
+    border-radius: 10px;
+  }
+  &__holder-2{
+    padding:30px 40px 40px 40px ;
+
+    background: linear-gradient(119.05deg, rgba(0, 113, 152, 0.6) -17.07%, rgba(252, 183, 139, 0.4) 21.44%, rgba(252, 183, 139, 0.4) 55.68%, rgba(0, 113, 152, 0.6) 95.46%);
+    border-radius: 10px;
+  }
+  &__subject{
+    @include txt;
+    @include font(normal,600,18px,23px,#111111);
+    margin-bottom:10px;
+  }
+  &__box{
+    column-gap: 38px;
+  }
+  &__list{
+    display: flex;
+    flex-direction: column;
+    row-gap: 5px;
+  }
+  &__link{
+    width: 203px;
+    @include txt;
+    @include font(normal,400,18px,23px,rgba(17, 17, 17, 0.5));
+  }
+  &__img{
+    width: 239px;
+    height: 148px;
+  }
+  &__row-2{
+    column-gap: 40px;
+  }
+}
+@media (max-width: 1200px) {
+   .service{
+     &__row{
+       column-gap: 20px;
+     }
+     &__holder{
+       padding:10px 20px 20px 20px;
+     }
+     &__holder-2{
+       padding:10px 20px 20px 20px;
+
+     }
+     &__img{
+       width: 169px;
+     }
+     &__row-2{
+       column-gap: 20px;
+     }
+   }
+}
+@media (max-width: 960px) {
+    .service{
+      &__row {
+        flex-wrap: wrap;
+        row-gap: 40px;
+      }
+      &__holder{
+        width: 640px;
+      }
+      &__holder-2{
+        width: 640px;
+      }
+      &__img{
+        width: 290px;
+      }
+      &__row-2{
+        row-gap: 40px;
+        flex-wrap: wrap;
+      }
+    }
+  .title{
+    &__second{
+       margin-bottom:22px;
+    }
+  }
+}
+@media (max-width: 640px) {
+   .service{
+     &__row{
+         row-gap: 20px;
+     }
+     &__holder{
+       width: 480px;
+     }
+     &__holder-2{
+       width: 480px;
+     }
+     &__img{
+       width: 210px;
+     }
+   }
+}
+@media (max-width: 480px) {
+  .service{
+    .row{
+      row-gap:30px;
+
+    }
+    &__holder{
+      width: 320px;
+    }
+    &__holder-2{
+      width: 320px;
+    }
+    &__img{
+      width: 70px;
+      height: 70px;
+    }
+    &__box{
+      column-gap: 0;
+      align-items: center;
+    }
+  }
+}

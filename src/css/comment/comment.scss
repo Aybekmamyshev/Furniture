@@ -1,0 +1,150 @@
+.comment{
+  .container {
+    margin-bottom: 75px;
+  }
+  &__block{
+    padding:20px 24px 12px 20px ;
+    background: #DAF1F9;
+    border-radius: 10px;
+  }
+    &__title{
+      @include txt;
+      @include font(normal,600,30px,38px,#007198);
+    }
+    &__text{
+      @include txt;
+      @include font(normal,400,18px,23px,#111111);
+    }
+  &__span{
+    @include font(normal,800,19px,20px,#000000);
+    padding-right: 5px;
+  }
+  &__subtitle{
+    @include txt;
+    @include font(normal,600,18px,23px,#111111);
+    width: 378px;
+  }
+  &__txt{
+    @include txt;
+    @include font(normal,400,18px,23px,#111111);
+    width:506px;
+  }
+  &__name{
+    @include txt;
+    @include font(normal,600,14px,18px,#111111);
+  }
+  &__date{
+    @include txt;
+    @include font(normal,400,14px,18px,#111111);
+  }
+  &__row-second{
+    column-gap:30px;
+  }
+  &__wide{
+    display: flex;
+    justify-content: space-between;
+  }
+  &__author{
+    @include txt;
+    @include font(normal,600,14px,18px,#111111);
+  }
+  &__user{
+    @include txt;
+    @include font(normal,600,18px,23px,#111111);
+  }
+  &__about{
+    @include txt;
+    @include font(normal,400,18px,23px,#111111);
+  }
+  &__lead{
+    @include txt;
+    @include font(normal,400,14px,18px,#111111);
+  }
+  &__watch{
+    @include txt;
+    @include font(normal,400,14px,18px,#111111);
+    padding:50px 51px;
+  }
+  &__holder{
+    padding: 20px 20px 12px 20px;
+    background:#DAF1F9;
+    border-radius: 10px;
+  }
+  &__inner{
+    column-gap:20px;
+    row-gap: 20px;
+  }
+}
+@media (max-width: 1200px) {
+   .comment{
+     &__inner{
+       column-gap:20px;
+       row-gap: 20px;
+       justify-content: center;
+     }
+     &__row-second{
+       flex-direction: column;
+       row-gap: 20px;
+     }
+     &__holder{
+       width:410px;
+     }
+     &__block{
+       width:850px;
+       margin: 0 auto;
+     }
+   }
+}
+@media (max-width:960px) {
+   .comment{
+     &__block{
+       width: 620px;
+     }
+     &__holder{
+       width: 295px;
+     }
+   }
+}
+@media (max-width: 640px) {
+  .comment{
+    &__block{
+      width: 480px;
+    }
+    &__holder{
+      width: 215px;
+    }
+    &__inner{
+      column-gap:15px;
+      row-gap: 10px;
+      justify-content: center;
+    }
+    &__row-second{
+      flex-direction: column;
+      row-gap:10px;
+    }
+    &__txt{
+      width: 422px;
+    }
+    &__row{
+      flex-direction: column;
+    }
+  }
+}
+@media (max-width: 480px) {
+   .comment{
+     &__block{
+       flex-direction: column;
+       width:290px;
+     }
+     &__holder{
+       width: 350px;
+     }
+     &__txt{
+       width:222px;
+     }
+     &__subtitle{
+       width: 222px;
+     }
+
+   }
+}

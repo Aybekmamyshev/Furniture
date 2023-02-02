@@ -1,0 +1,49 @@
+.btn{
+  @include  font(normal,500,14px,20px,#111111);
+  @include txt;
+  padding:10px 13px;
+  border-radius: 6px;
+  background:transparent;
+  color:var(--color-btn);
+  transition:.5s;
+  position: relative;
+
+  &::before{
+    content:'';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 10px;
+    height: 10px;
+    border-left: 2px solid var(--color-btn);
+    border-top: 2px solid var(--color-btn);
+    transition-delay: 1s;
+    transition:width 0.4s,height 0.4s;;
+  }
+  &::after{
+    content:'';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 10px;
+    height: 10px;
+    border-bottom: 2px solid var(--color-btn);
+    border-right: 2px solid var(--color-btn);
+    transition-delay: 1s;
+    transition:width 0.4s,  height 0.4s;;
+    overflow: hidden;
+  }
+  &:hover::before,
+  &:hover::after{
+    width: 100%;
+    height: 100%;
+    transition-delay: 0s;
+
+  }
+  &:hover{
+    box-shadow:0 0 10px var(--color-btn), 0 0 20px var(--color-btn), 0 0 30px var(--color-btn);
+    background: var(--color-btn);
+    color: #ffffff;
+    transition-delay: 0.4s;
+  }
+}

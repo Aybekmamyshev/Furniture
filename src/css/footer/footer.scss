@@ -1,0 +1,131 @@
+.footer{
+  background:#48B8DF33;
+  .container{
+    padding:37px 0 37px;
+  }
+  &__column{
+    display: none;
+  }
+  &__row{
+    border-bottom:1px solid rgba(17, 17, 17, 0.5);
+    padding-bottom: 38px;
+    column-gap: 120px;
+  }
+   &__img{
+     width: 64px;
+     height: 50px;
+     margin-bottom: 12px;
+   }
+  &__number{
+    @include txt;
+    @include font(normal,600,18px,23px,#111111);
+    margin-bottom: 13px;
+  }
+  &__email{
+    @include txt;
+    @include font(normal,600,14px,18px,#111111);
+  }
+&__txt{
+  @include txt;
+  @include font(normal,400,14px,18px,#111111);
+}
+  &__title{
+    @include txt;
+    @include font(normal,600,14px,18px,#111111);
+    margin-bottom:12px;
+  }
+  &__link{
+    @include txt;
+    @include font(normal,400,14px,18px,#111111);
+  }
+  &__block{
+    &_add{
+      display: flex;
+      column-gap: 159px;
+    }
+  }
+  &__desk{
+    display: flex;
+    flex-direction: column;
+    row-gap:6px;
+  }
+  &__inner{
+    display: flex;
+    flex-direction: column;
+    row-gap: 6px;
+  }
+  &__about{
+    @include txt;
+    @include font(normal,600,14px,18px,#111111);
+  }
+  &__row-second{
+    margin-top:40px;
+  }
+  &__since{
+    @include txt;
+    @include font(normal,400,14px,18px,rgba(17, 17, 17, 0.5));
+  }
+  &__subtitle{
+    @include txt;
+    @include font(normal,400,14px,18px,#111111);
+  }
+  &__holder{
+    &_pic{
+      display: flex;
+      column-gap: 10px;
+    }
+  }
+  &__col{
+    display: flex;
+    column-gap:185px;
+  }
+}
+@media (max-width: 960px) {
+   .footer{
+     &__row{
+       column-gap: 80px;
+     }
+     &__box{
+       flex-direction: column;
+     }
+     &__list{
+       width: 181px;
+     }
+     &__block{
+       flex-direction: column;
+     }
+     &__col{
+       flex-direction: column;
+     }
+   }
+}
+@media (max-width: 640px) {
+     .footer{
+       &__row{
+         column-gap: 20px;
+       }
+       &__copy{
+         flex-direction: column;
+       }
+     }
+}
+@media (max-width: 480px) {
+   .footer{
+     &__first{
+       display: none;
+     }
+     &__column{
+       display: block;
+
+     }
+     &__grids{
+       display: flex;
+       column-gap: 20px;
+       margin-bottom: 40px;
+       &:nth-child(2){
+         border-bottom:1px solid rgba(17, 17, 17, 0.5);
+         padding-bottom:28px;
+       }
+     }
+   }
+}

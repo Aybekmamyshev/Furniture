@@ -1,0 +1,11 @@
+@mixin font ($fs,$fw,$size,$l-h,$color){
+  font-style:$fs;
+  font-weight:$fw;
+  font-size: $size;
+  line-height: $l-h;
+  color:$color;
+
+}
+@mixin txt{
+  font-family:'Futura PT', sans-serif;  
+}
